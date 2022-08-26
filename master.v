@@ -1,38 +1,4 @@
-`timescale 1ns / 1ps
-module ram(clk,addres,data_in,en,we,data_out);
-
-input clk,en,we;
-
-input[2:0] addres;
-
-input[7:0] data_in;
-
-output reg [7:0] data_out;
-
-reg [7:0] mem [0:7];
-
-initial begin data_out = 8'b00000000; end
-
-always@(posedge clk)
-
-if(en)begin
-
-if(we)
-
-mem[addres]=data_in;
-
-else
-
-data_out=mem[addres];
-
-end
-
-else
-
-data_out = data_out;
-
-endmodule
-
+`timescale 1us / 1us
 module i2c_master#(
             parameter DATA_WIDTH = 8,
             parameter REG_WIDTH  = 8,
@@ -594,6 +560,7 @@ i2c_master #(.DATA_WIDTH(8),.REG_WIDTH(8),.ADDR_WIDTH(7))
                                 proc_counter <= 0;
                             end
                         endcase
+o_busy<=0;
                     end
 
                 endcase

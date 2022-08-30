@@ -1,3 +1,6 @@
+fSCL=fCLK8+4(divider−1)
+
+
 Name	Type	Width	Direction	Description
 i_clk	wire	1	input	Main system clock (note: not the actual I2C SCL)
 i_rst	wire	1	input	Active high reset

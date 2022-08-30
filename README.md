@@ -1,4 +1,4 @@
-fSCL=fCLK8+4(divider−1)
+fSCL=fCLK/(8+4(divider−1))
 
 
 Name	Type	Width	Direction	Description
